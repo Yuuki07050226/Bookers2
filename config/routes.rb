@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "homes#top"
-  resources :post_books, only:[:new, :show, :index, :edit, :create, :destory, :update]
-  resources :post_users, only:[:show, :edit]
+  resources :books, only:[:new, :show, :index, :edit, :create, :destory, :update]
+  resources :users, only:[:show, :edit]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
